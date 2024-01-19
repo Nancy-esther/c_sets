@@ -29,7 +29,7 @@ void input_array(int n, int a[n])
     {
       scanf("%d",&a[i]);
     }
-   return a[n];
+  
 }
 int sum_n_array(int n, int a[n])
 {
