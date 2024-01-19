@@ -1,60 +1,48 @@
-//
-#include<stdio.h>
-#include<string.h>
-#define MAX_SIZE 100
-void input_two_strings(char *string1, char *string2);
-int stringcompare(char *string1, char *string2);
-void output(char *string1, char *string2, int result);
-int main()
-{
-  int n;
-  //char string1,string2;
-  char string1[MAX_SIZE],string2[MAX_SIZE];
-  input_two_strings(*string1,*string2);
-   int result=stringcompare(*string1,*string2);
-  printf("%d",result);
-  output(*string1,*string2,result);
-  return 0;
-}
-void input_two_strings(char *string1, char *string2)
-{
-  printf("Enter the first string\n");
-  gets(string1);
-  printf("Enter the second string\n");
-  sgets(string2);
+#include <stdio.h>
 
-}
-int stringcompare(char *string1,char *string2)
-{
-    int compare(char * str1, char * str2)
-{
-    while((*str1 && *str2) && (*str1 == *str2)) { str1++; str2++; }
+// Function to input two strings
+void input_two_strings(char *string1, char *string2) {
+    printf("Enter the first string: ");
+    scanf("%s", string1);
 
-    return *str1 - *str2;
-
+    printf("Enter the second string: ");
+    scanf("%s", string2);
 }
 
- // result=compare(string1,string2);
-
-
-  if(result == 0)
-    {
-        printf("Both strings are equal.");
+// Function to compare two strings character by character
+int stringcompare(char *string1, char *string2) {
+    while (*string1 != '\0' && *string2 != '\0') {
+        if (*string1 != *string2) {
+            return *string1 - *string2;
+        }
+        string1++;
+        string2++;
     }
-    else if(result < 0)
-    {
-        printf("string1 is  smaller than string2.");
-    }
-    else
-    {
-        printf("string1 is greater than string2.");
-    }
-
-    return result;
-
+    return *string1 - *string2;
 }
 
-/*void output(char *string1, char *string2, int result)
-{
-  printf()  */
+// Function to output the comparison result
+void output(char *string1, char *string2, int result) {
+    if (result == 0) {
+        printf("The strings %s and %s are equal.\n", string1, string2);
+    } else if (result < 0) {
+        printf("The string %s is greater than %s.\n", string2, string1);
+    } else {
+        printf("The string %s is  lesser than %s.\n", string2, string1);
+    }
+}
 
+int main() {
+    char string1[100], string2[100];
+
+    // Input two strings
+    input_two_strings(string1, string2);
+
+    // Compare strings character by character
+    int result = stringcompare(string1, string2);
+
+    // Output the result
+    output(string1, string2, result);
+
+    return 0;
+}
