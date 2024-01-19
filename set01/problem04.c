@@ -26,3 +26,4 @@ void output(int a, int b, int sum)
 {
   printf("The sum of %d and %d is %d",a,b,sum);
 }
+
