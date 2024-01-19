@@ -12,15 +12,10 @@ int main()
 }
 int input_n()
 {
-  int i,n;
+  int n;
   printf("Enter n numbers\n");
    scanf("%d",&n);
-  for(i=1;i<=n;i++)
-  {
-    scanf("%d",&i);
-  }
-
-  return n;
+    return n;
 
 }
 int sum_n_nos(int n)
