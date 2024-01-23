@@ -15,7 +15,7 @@ int main()
 int input_side()
 {
     int a;
-    printf("Enter the side a:");
+    printf("Enter the side:");
     scanf("%d", &a);
     return a;
 }
