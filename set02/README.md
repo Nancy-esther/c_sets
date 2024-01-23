@@ -27,7 +27,6 @@ The area of the traingle with base 1.000000 and height 2.000000 is 1.000000
 > A triangle is scalene if all the three sides of the triangle are not equal to one another
 
 ***Function Declarations***
-```c
 int input_side();
 int check_scalene(int a, int b, int c);
 void output(int a, int b, int c, int isscalene);
