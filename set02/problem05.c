@@ -12,20 +12,33 @@ int input()
 }
 int find_gcd(int a,int b)
 {
-   
-   if(b==0)
+  while (b!=0)
+  {
+    int temp =b;
+    b = a % b;
+    a = temp;
+  }
    return a;
-      return gcd(b,a % b);
-}
+  }
+  /* int hcf;
+  for (int i=2;i<=a && i<=b;i++)  
+  {
+    if(a%i==0 && b%i==0)
+    {
+        hcf=i;
+    }
+  }
+return hcf; }*/
+
 void output(int a,int b,int gcd)
 {
-    printf("%d and %d is %d",a,b,find_gcd);
+    printf("%d and %d is %d",a,b,gcd);
 }
 int main()
 {
-    int a,b,gcd;
+    int a,b;
    a=input();
    b=input();
-   find_gcd(a,b);
+   int gcd = find_gcd(a,b);
    output(a,b,gcd);
 }

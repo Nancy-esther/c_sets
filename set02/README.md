@@ -79,7 +79,6 @@ int sum_composite_numbers(int n, int a[n]);
 void output(int sum);
 ```
 
-***Input***
 ```
 1 2 7 8 12
 ```
