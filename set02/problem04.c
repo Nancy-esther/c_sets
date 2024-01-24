@@ -13,7 +13,7 @@ void input_array(int n, int a[n])
 {
     int i,count;
 for (i=0;i<n;i++){
-    scanf("%d",a[i]);
+    scanf("%d",&a[i]);
 }
 for(i=0;i<n;i++){
     if (a[i]==2){
