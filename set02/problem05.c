@@ -20,16 +20,7 @@ int find_gcd(int a,int b)
   }
    return a;
   }
-  /* int hcf;
-  for (int i=2;i<=a && i<=b;i++)  
-  {
-    if(a%i==0 && b%i==0)
-    {
-        hcf=i;
-    }
-  }
-return hcf; }*/
-
+  
 void output(int a,int b,int gcd)
 {
     printf("%d and %d is %d",a,b,gcd);
