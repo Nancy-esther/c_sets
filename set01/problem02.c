@@ -2,13 +2,13 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,result=0;
+    int num1,num2,sum;
     printf("Enter the first number");
-    scanf("%d",&a);
+    scanf("%d",&num1);
     printf("Enter the second number");
-    scanf("%d",&b);
-    result=a+b;
-    printf("The addition of first and second number is %d:\n",result);
+    scanf("%d",&num2);
+    sum = num1 + num2;
+    printf("The sum of %d + %d is = %d\n",num1,num2,sum);
     return 0;
 }
 

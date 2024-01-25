@@ -1,0 +1,51 @@
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> gcc -g -O0 problem04.c
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> ./a.exe
+Enter the first number: 1
+Enter the second number: 2
+The sum of 1 and 2 is 3
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> a.exe
+a.exe : The term 'a.exe' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a 
+path was included, verify that the path is correct and try again.
+At line:1 char:1
++ a.exe
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (a.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+
+Suggestion [3,General]: The command a.exe was not found, but does exist in the current location. Windows PowerShell does not load commands from the current location by default. If you trust this command, instead type: ".\a.exe". See "get-help about_Command_Precedence" for more details.
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem04.c, line 8.
+(gdb) r
+Starting program: C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01/a.exe
+[New Thread 16460.0x4ef8]
+[New Thread 16460.0x3fa8]
+
+Breakpoint 1, main () at problem04.c:8
+8         input(&a,&b);
+(gdb) n
+Enter the first number: 1
+Enter the second number: 2
+9         add(a,b,&sum);
+(gdb) n
+10        output(a,b,sum);
+(gdb) n
+The sum of 1 and 2 is 311         return 0;
+(gdb) n
+12      }
+(gdb) c
+Continuing.
+[Inferior 1 (process 16460) exited normally]
+(gdb) q
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> 

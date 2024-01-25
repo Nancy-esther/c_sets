@@ -1,0 +1,46 @@
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> gcc -g -O0 problem05.c
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> ./a.exe 
+Enter a number: 1
+Enter a number: 2
+Enter a number: 3
+The largest of 1, 2 and 3 is 3
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem05.c, line 10.
+(gdb) r
+Starting program: C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01/a.exe 
+[New Thread 8808.0xa40]
+[New Thread 8808.0x4ec0]
+
+Breakpoint 1, main () at problem05.c:10
+10        a=input();
+(gdb) n
+Enter a number: 1
+11        b=input();
+(gdb) n
+Enter a number: 2
+12        c=input();
+(gdb) n
+Enter a number: 3
+13        largest=compare(a,b,c);
+(gdb) n
+14        output(a,b,c,largest);
+(gdb) n
+The largest of 1, 2 and 3 is 315          return 0;
+(gdb) n
+16      }
+(gdb) c
+Continuing.
+[Inferior 1 (process 8808) exited normally]
+(gdb) q
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01>

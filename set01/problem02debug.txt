@@ -1,0 +1,9 @@
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> gcc -g - O0 problem02.c
+gcc.exe: error: O0: No such file or directory
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> gcc -g - O0 problem02.c
+gcc.exe: error: O0: No such file or directory
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01> ./a.exe
+Enter the first number 2
+Enter the second number 3
+The addition of 5 and 6422356 is 4200939:
+PS C:\Users\Joanna Pearlyn\cprogramming\c_sets\set01>
