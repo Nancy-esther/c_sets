@@ -13,12 +13,16 @@ int main()
 }
 int input(int *a, int *b, int *c)
 {
-  printf("Enter the three numbers\n");
-  scanf("%d%d%d",a,b,c);
+  printf("Enter the number");
+  scanf("%d",a);
+  printf("Enter the number");
+  scanf("%d",b);
+  printf("Enter the number");
+  scanf("%d",c);
 }
 void compare(int a, int b, int c, int *largest)
 {
-  if(a>b && a>c)
+    if(a>b && a>c)
   {
      *largest=a;
   }
