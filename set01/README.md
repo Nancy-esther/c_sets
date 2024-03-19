@@ -114,6 +114,8 @@ void output(int a, int b, int c, int largest);
 
 7. Write a C program to find sum of all natural numbers until _n_
 
+
+
 ***Function Declarations***
 
 ```c

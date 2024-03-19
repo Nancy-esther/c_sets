@@ -1,48 +1,75 @@
 #include <stdio.h>
-
-// Function to input two strings
-void input_two_strings(char *string1, char *string2) {
-    printf("Enter the first string: ");
-    scanf("%s", string1);
-
-    printf("Enter the second string: ");
-    scanf("%s", string2);
-}
-
-// Function to compare two strings character by character
-int stringcompare(char *string1, char *string2) {
-    while (*string1 != '\0' && *string2 != '\0') {
-        if (*string1 != *string2) {
-            return *string1 - *string2;
-        }
-        string1++;
-        string2++;
-    }
-    return *string1 - *string2;
-}
-
-// Function to output the comparison result
-void output(char *string1, char *string2, int result) {
-    if (result == 0) {
-        printf("The strings %s and %s are equal.\n", string1, string2);
-    } else if (result < 0) {
-        printf("The string %s is greater than %s.\n", string2, string1);
-    } else {
-        printf("The string %s is  lesser than %s.\n", string2, string1);
-    }
-}
-
-int main() {
-    char string1[100], string2[100];
-
-    // Input two strings
-    input_two_strings(string1, string2);
-
-    // Compare strings character by character
-    int result = stringcompare(string1, string2);
-
-    // Output the result
-    output(string1, string2, result);
-
+void input_two_strings(char *string1, char *string2);
+int stringcompare(char *string1, char *string2);
+void output(char *string1, char *string2, int result);
+int main()
+{
+    char string1[50],string2[50];
+    int result;
+    input_two_strings(string1,string2);
+    result = stringcompare(string1,string2);
+    output(string1,string2,result);
     return 0;
+}
+void input_two_strings(char *string1, char *string2)
+{
+    printf("Enter the string1:");
+    scanf("%s",string1);
+    printf("Enter the string2:");
+    scanf("%s",string2);
+}
+int stringcompare(char *string1, char *string2)
+{
+    int i;
+    while(string1[i]!=string2[i] && string1[i]!='\0')
+    {
+        i++;
+        if(string1[i] > string2[i])
+        {
+            printf("String1 is greater than String2");
+            
+        }
+        else
+        {    break;
+            //printf("String1 is lesser than string2");
+        }
+       if(string1[i] < string2[i])
+       {
+          printf("String1 is lesser than String2");
+       }
+       else
+       {   
+        
+          printf("String1 is equal to string2");
+       }
+     
+    }
+
+  /*  for(i=0;string1[i]!='\0'||string2[i]!='\0';i++)
+    {
+        if(string1[i]!=string2[i])
+        {
+           temp = 1;
+           break;
+        }
+        else if(string1[i]>string2[i])
+         {
+            printf("string1 is greater than string2");
+         }
+         else(string)
+
+
+    }
+        if(temp==1)
+        {
+            printf("String1 is lesser than string2");
+        }
+        else
+        {
+           printf("String1 is greater than string2");
+        }*/
+}
+void output(char *string1, char *string2, int result)
+{
+    printf("%d",result);
 }
